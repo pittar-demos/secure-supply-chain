@@ -9,7 +9,7 @@ resources:
   - github.com/pittar-demos/demo-catalog/openshift-gitops-instances/argocd/gitops?ref=main
 
 patches:
-  # Patch project for openshift gitops config app.
+  # Patch project for openshift pipelines app.
   - patch: |-
       - op: replace
         path: /spec/project
@@ -20,7 +20,18 @@ patches:
       kind: Application
       name: openshift-pipelines
       namespace: openshift-gitops
-  # Patch project for workload monitoring app.
+  # Patch project for tekton chains app.
+  - patch: |-
+      - op: replace
+        path: /spec/project
+        value: 'cluster-services'
+    target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: Application
+      name: tekton-chains
+      namespace: openshift-gitops
+  # Patch project for developer gitops app.
   - patch: |-
       - op: replace
         path: /spec/project
