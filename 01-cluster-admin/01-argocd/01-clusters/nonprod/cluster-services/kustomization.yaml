@@ -7,3 +7,27 @@ resources:
   - github.com/pittar-demos/demo-catalog/openshift-pipelines/argocd?ref=main
   # GitOps instance for Developers
   - github.com/pittar-demos/demo-catalog/openshift-gitops-instances/argocd/gitops?ref=main
+
+patches:
+  # Patch project for openshift gitops config app.
+  - patch: |-
+      - op: replace
+        path: /spec/project
+        value: 'cluster-services'
+    target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: Application
+      name: openshift-pipelines
+      namespace: openshift-gitops
+  # Patch project for workload monitoring app.
+  - patch: |-
+      - op: replace
+        path: /spec/project
+        value: 'cluster-services'
+    target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: Application
+      name: developer-gitops
+      namespace: openshift-gitops
