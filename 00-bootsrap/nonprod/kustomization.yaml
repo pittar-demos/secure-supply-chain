@@ -1,0 +1,5 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+resources:
+  - ../../01-cluster-admin/01-argod/01-clusters/nonprod/bootstrap
