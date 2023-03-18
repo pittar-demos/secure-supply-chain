@@ -2,7 +2,6 @@ kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 
 resources:
-  - cluster-services-project.yaml
   # OpenShift Pipelines
   - github.com/pittar-demos/demo-catalog/openshift-pipelines/argocd?ref=main
   # GitOps instance for Developers
