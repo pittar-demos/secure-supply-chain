@@ -7,6 +7,8 @@ resources:
   - github.com/pittar-demos/demo-catalog/tekton-chains/argocd?ref=main
   # GitOps instance for Developers
   - github.com/pittar-demos/demo-catalog/openshift-gitops-instances/argocd/gitops?ref=main
+  # Add SonarQube
+  - github.com/pittar-demos/demo-catalog/sonarqube/argocd?ref=main
 
 patches:
   # Patch project for openshift pipelines app.
