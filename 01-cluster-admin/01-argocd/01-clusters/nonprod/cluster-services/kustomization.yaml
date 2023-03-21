@@ -59,7 +59,7 @@ patches:
       kind: Application
       name: nexus
       namespace: openshift-gitops
-  # Patch project for Nexus.
+  # Patch project for SonarQube.
   - patch: |-
       - op: replace
         path: /spec/project

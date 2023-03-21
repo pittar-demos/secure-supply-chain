@@ -1,6 +1,8 @@
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 
+namespace: openshift-gitops
+
 resources:
   # User Workload Monitoring
   - github.com/pittar-demos/demo-catalog/openshift-user-workload-monitoring/argocd?ref=main
