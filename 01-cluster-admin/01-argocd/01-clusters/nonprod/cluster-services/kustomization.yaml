@@ -1,6 +1,8 @@
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 
+namespace: openshift-gitops
+
 resources:
   # OpenShift Pipelines and Tekton Chains
   - github.com/pittar-demos/demo-catalog/openshift-pipelines-operator/argocd?ref=main
