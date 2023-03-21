@@ -14,8 +14,7 @@ patches:
         path: /data/NAMESPACES
         value: 'petclinic-cicd'
     target:
-      group: ""
-      version: vi
+      version: v1
       kind: ConfigMap
       name: roxsecret-namespaces
       namespace: stackrox
