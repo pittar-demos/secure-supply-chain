@@ -13,6 +13,8 @@ resources:
   - github.com/pittar-demos/demo-catalog/sonarqube/argocd?ref=main
   # Nexus
   - github.com/pittar-demos/demo-catalog/nexus/argocd?ref=main
+  # Advanced Cluster Security Operator and Instance
+  - github.com/pittar-demos/demo-catalog/advanced-cluster-security-operator/argocd?ref=main
 
 patches:
   # Patch project for openshift pipelines app.
@@ -69,4 +71,15 @@ patches:
       version: v1alpha1
       kind: Application
       name: sonarqube
+      namespace: openshift-gitops
+  # Patch project for SonarQube.
+  - patch: |-
+      - op: replace
+        path: /spec/project
+        value: 'cluster-services'
+    target:
+      group: argoproj.io
+      version: v1alpha1
+      kind: Application
+      name: rhacs-operator
       namespace: openshift-gitops
