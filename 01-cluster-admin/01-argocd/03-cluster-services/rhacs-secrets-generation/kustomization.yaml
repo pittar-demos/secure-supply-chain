@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: openshift-gitops
 
 resources:
-  - github.com/pittar-demos/demo-catalog/openshift-gitops-instances/argocd/openshift-gitops?ref=main
+  - rhacs-secrets-generation-application.yaml

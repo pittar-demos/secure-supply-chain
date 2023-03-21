@@ -1,0 +1,21 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+namespace: stackrox
+
+resources:
+  # Stackrox secret generation.
+  - github.com/pittar-demos/demo-catalog/openshift-pipelines-tasks/config/acs-secrets?ref=main
+
+patches:
+  # Patch project for openshift pipelines app.
+  - patch: |-
+      - op: replace
+        path: /data/NAMESPACES
+        value: 'petclinic-cicd'
+    target:
+      group: ""
+      version: vi
+      kind: ConfigMap
+      name: roxsecret-namespaces
+      namespace: stackrox
