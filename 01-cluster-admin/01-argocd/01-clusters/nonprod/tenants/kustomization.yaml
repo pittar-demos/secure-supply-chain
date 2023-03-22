@@ -4,7 +4,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 namespace: openshift-gitops
 
 resources:
-  - tenants-project.yaml
-  - ../../../04-tenants/superhero-battle/cicd
-  - ../../../04-tenants/superhero-battle/dev
-  - ../../../04-tenants/superhero-battle/test
+  - ../../../04-tenants/petclinic/cicd
+  - ../../../04-tenants/petclinic/dev
+  - ../../../04-tenants/petclinic/test
