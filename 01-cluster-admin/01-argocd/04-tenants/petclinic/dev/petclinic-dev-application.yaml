@@ -2,13 +2,14 @@ kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "302"
+    argocd.argoproj.io/sync-wave: "2"
   labels:
-    gitops.ownedBy: openshift-gitops
+    gitops.ownedBy: gitops
+    category: namespace-config
   name: petclinic-dev-namespace
 spec:
   destination:
-    namespace: openshift-gitops
+    namespace: petclinic-dev
     server: https://kubernetes.default.svc
   project: tenants
   source:

@@ -2,9 +2,10 @@ kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "301"
+    argocd.argoproj.io/sync-wave: "1"
   labels:
     gitops.ownedBy: openshift-gitops
+    catgory: namespace-config
   name: petclinic-prod-namespace
 spec:
   destination:
