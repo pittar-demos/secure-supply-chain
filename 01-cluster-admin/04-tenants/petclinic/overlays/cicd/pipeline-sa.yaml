@@ -3,4 +3,6 @@ kind: ServiceAccount
 metadata:
   name: pipeline
 secrets:
-- name: gitea-creds
+- name: git-creds
+- name: quay-creds
+#- name: gitea-creds
