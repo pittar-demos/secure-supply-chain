@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: gitops
 
 resources:
-  - petclinic-cicd-application.yaml
+  - petclinic-test-application.yaml
