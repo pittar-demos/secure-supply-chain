@@ -9,6 +9,7 @@ resources:
   - github.com/pittar-demos/demo-catalog/tekton-chains/argocd?ref=main
   # GitOps instance for Developers
   - github.com/pittar-demos/demo-catalog/openshift-gitops-instances/argocd/gitops?ref=main
+  - ../../../03-cluster-services/developer-gitops
   # Add SonarQube
   - github.com/pittar-demos/demo-catalog/sonarqube/argocd?ref=main
   # Nexus
