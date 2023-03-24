@@ -6,4 +6,4 @@ namespace: petclinic-cicd
 resources:
   - namespace.yaml
   #- gitea-creds-secret.yaml
-  - pipeline-sa.yaml
+  #- pipeline-sa.yaml
