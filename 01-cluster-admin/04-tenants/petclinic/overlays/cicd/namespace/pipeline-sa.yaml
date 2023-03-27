@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: pipeline
-secrets:
-- name: git-creds
-- name: quay-creds
-#- name: gitea-creds
