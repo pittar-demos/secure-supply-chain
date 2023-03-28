@@ -7,6 +7,7 @@ resources:
   # OpenShift Pipelines and Tekton Chains
   - github.com/pittar-demos/demo-catalog/openshift-pipelines-operator/argocd?ref=main
   - github.com/pittar-demos/demo-catalog/tekton-chains/argocd?ref=main
+  - ../../../03-cluster-services/openshift-pipelines-tasks
   # GitOps instance for Developers
   - github.com/pittar-demos/demo-catalog/openshift-gitops-instances/argocd/gitops?ref=main
   - ../../../03-cluster-services/developer-gitops
