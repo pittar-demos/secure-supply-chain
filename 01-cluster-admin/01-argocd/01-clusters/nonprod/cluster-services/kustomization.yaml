@@ -11,6 +11,8 @@ resources:
   # GitOps instance for Developers
   - github.com/pittar-demos/demo-catalog/openshift-gitops-instances/argocd/gitops?ref=main
   - ../../../03-cluster-services/developer-gitops
+  # Vertical Pod Autoscaler
+  - github.com/pittar-demos/demo-catalog/openshift-vpa-autoscaler/argocd?ref=main
   # Add SonarQube
   - github.com/pittar-demos/demo-catalog/sonarqube/argocd?ref=main
   # Nexus
