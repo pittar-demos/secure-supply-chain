@@ -3,7 +3,7 @@
 ## 1. Install OpenShift GitOps Operator
 
 ```
-oc apply -k https://github.com/pittar-demos/demo-catalog/openshift-gitops-operator/overlays/gitops-1.7
+oc apply -k https://github.com/pittar-demos/demo-catalog/openshift-gitops-operator/overlays/latest
 ```
 
 ## 2. Bootstrap "nonprod" Cluster
