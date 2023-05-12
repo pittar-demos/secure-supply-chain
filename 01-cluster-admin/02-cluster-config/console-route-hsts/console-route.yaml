@@ -1,0 +1,8 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: ServerSideApply=true
+    haproxy.router.openshift.io/hsts_header: max-age=31536000
+  name: console
+  namespace: openshift-console
