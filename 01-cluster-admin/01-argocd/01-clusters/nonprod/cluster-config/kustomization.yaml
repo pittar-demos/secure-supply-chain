@@ -8,7 +8,7 @@ resources:
   - github.com/pittar-demos/demo-catalog/openshift-user-workload-monitoring/argocd?ref=main
   # OpenShift GitOps Config
   - github.com/pittar-demos/demo-catalog/openshift-gitops-instances/argocd/openshift-gitops?ref=main
-  - ../../02-cluster-config/console-route-hsts
+  - ../../../02-cluster-config/console-route-hsts
 
 patches:
   # Patch project for openshift gitops config app.
